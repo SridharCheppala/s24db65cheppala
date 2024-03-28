@@ -8,7 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var gRouter = require('./routes/grid');
 var rRouter = require('./routes/pick');
-
+var eRouter = require('./routes/electronic');
 var app = express();
 
 // view engine setup
@@ -25,6 +25,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/grid', gRouter);
 app.use('/ran', rRouter);
+app.use('/ele', eRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

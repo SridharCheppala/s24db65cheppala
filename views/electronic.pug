@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  - let results = [{electronic_type:'Oven',ratting:'five',cost:100},{electronic_type:'airpods',ratting:'four',cost:150},{electronic_type:'mobile',ratting:'two',cost:200}]
+  div(class="container-fluid")
+    div(class="row")
+      each item, index in results  
+        div(class="col-sm-2",onclick=`buy(${index})`)
+          p #{item.electronic_type} 
+          p #{item.ratting}
+          p #{item.cost} 
+  script.
+    function buy(index) {
+    alert("You purchased item " + index);}
