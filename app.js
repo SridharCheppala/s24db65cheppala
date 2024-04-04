@@ -9,7 +9,7 @@ var usersRouter = require('./routes/users');
 var gRouter = require('./routes/grid');
 var rRouter = require('./routes/pick');
 var eRouter = require('./routes/electronic');
-var Costume = require("./models/electronic");
+//var Costume = require("./models/electronic");
 var electronic = require('./models/electronic');
 var resourceRouter=require('./routes/resource');
 var app = express();
@@ -59,7 +59,7 @@ async function recreateDB(){
 // Delete everything
 await electronic.deleteMany();
 let instance1 = new
-Costume({electronic_type:"oven", ratting:'five',
+electronic({electronic_type:"oven", ratting:'five',
 cost:15.4});
 instance1.save().then(doc=>{
 console.log("First object saved")}
@@ -67,7 +67,7 @@ console.log("First object saved")}
 console.error(err)
 });
 let instance2 = new
-Costume({electronic_type:"laptop", ratting:'four',
+electronic({electronic_type:"laptop", ratting:'four',
 cost:30});
 instance2.save().then(doc=>{
 console.log("Second object saved")}
@@ -75,7 +75,7 @@ console.log("Second object saved")}
 console.error(err)
 });
 let instance3 = new
-Costume({electronic_type:"mobile", ratting:'five',
+electronic({electronic_type:"mobile", ratting:'five',
 cost:25});
 instance3.save().then(doc=>{
 console.log("Third object saved")}
