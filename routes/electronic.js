@@ -1,9 +1,6 @@
 var express = require('express');
+const electronic_controlers= require('../controllers/electronic');
 var router = express.Router();
-
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('electronic', { title: 'A serach by electronic' });
-});
-
+/* GET electronic */
+router.get('/', electronic_controlers.electronic_view_all_Page );
 module.exports = router;
