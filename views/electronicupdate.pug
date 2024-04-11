@@ -1,6 +1,9 @@
 extends layout
 block content
   h1= title
+  if (toShow == null)
+    h2 No instance to update
+  else
     - let electronicid = toShow._id
     - let electronic_type = toShow.electronic_type
     - let ratting = toShow.ratting
@@ -19,7 +22,7 @@ block content
         div.form-group
         label.electronicAttr(for='cost') electronic cost
         input#cost(type='number', name='cost', value= cost )
-        input(type="submit")(style="color:red; background-color:yellow;")
+        input(type="submit")(style="color:green; background-color:black;")
     script.
         document.forms['electronicForm'].addEventListener('submit', (event) => {
         event.preventDefault();

@@ -1,6 +1,9 @@
 extends layout
 block content
     h1= title
+if (toShow == null)
+    h2 No instance to detail
+else 
     - let electronicid = toShow._id
     - let electronic_type = toShow.electronic_type
     - let ratting = toShow.ratting
