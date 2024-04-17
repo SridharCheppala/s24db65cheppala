@@ -1,23 +1,23 @@
 extends layout
 block content
     h1= title
-if (toShow == null)
-    h2 No instance to detail
-else 
-    - let electronicid = toShow._id
-    - let electronic_type = toShow.electronic_type
-    - let ratting = toShow.ratting
-    - let cost = toShow.cost 
-    div
-        div.row
-        div(class='electronicAttr mr-3') electronic ID is:
-        div #{electronicid}
-        div.row
-        div(class='electronicAttr mr-3') electronic Type is:
-        div #{electronic_type}
-        div.row
-        div(class='electronicAttr mr-3') ratting  is:
-        div #{ratting}
-        div.row
-        div(class='electronicAttr mr-3') electronic Cost is:
-        div #{cost}
+    if (toShow == null)
+        h2 No instance to detail
+    else 
+        - let electronicid = toShow._id
+        - let electronic_type = toShow.electronic_type
+        - let ratting = toShow.ratting
+        - let cost = toShow.cost 
+        div
+            div.row
+                div(class='electronicAttr mr-3') electronic ID is:
+                div #{electronicid}
+            div.row
+                div(class='electronicAttr mr-3') electronic Type is:
+                div #{electronic_type}
+            div.row
+                div(class='electronicAttr mr-3') ratting  is:
+                div #{ratting}
+            div.row
+                div(class='electronicAttr mr-3') electronic Cost is:
+                div #{cost}
